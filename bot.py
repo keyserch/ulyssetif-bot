@@ -9,7 +9,7 @@ import requests  # nécessite: pip install requests
 from telegram import Update
 from telegram.ext import Application, MessageHandler, CommandHandler, ContextTypes, filters
 
-TOKEN = "8531079668:AAGoe9p8awq5Fzef3But97rQwu8tKE2Mruw"  # <<< remplace par ton vrai token
+TOKEN = os.getenv("TOKEN")
 ANNOUNCE_CHANNEL_ID = -1003199435152  # ID du canal annonces
 DISCUSSION_CHAT_ID = -1003203628589   # ID du canal de discussion
 TRADES_FILE = "trades.json"
@@ -731,3 +731,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
